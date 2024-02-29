@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | IPM Al Amin</title>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <!-- bootstrap 4 css -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- main css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- icon -->
+    <link rel="icon" href="assets/img/logo/moneyzee-logo-bar.svg">
+    <!-- Animate Css -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+</head>
+
+<body>
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <!-- brand -->
+            <a class='navbar-brand' href='/'>
+                <div class="logo">
+                    <img src="assets/img/logo/ipm.png" alt="logo" width="150px">
+                </div>
+            </a>
+
+            <!-- toggler/collapsible button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 96 960 960" width="32">
+                    <path
+                        d="M190 546q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T190 486h580q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T770 546H190Zm0 120q-12.75 0-21.375-8.675-8.625-8.676-8.625-21.5 0-12.825 8.625-21.325T190 606h580q12.75 0 21.375 8.675 8.625 8.676 8.625 21.5 0 12.825-8.625 21.325T770 666H190Z" />
+                </svg>
+            </button>
+
+            <!-- navbar links -->
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class='nav-link active' href='#'>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class='nav-link' href='#about'>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class='nav-link' href='#event'>Event</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class='nav-link' href='#proker'>Proker</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#features" id="navbarDropdowns" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Pena
+                        </a>
+                        <div class="dropdown-menu p-2 shadow" aria-labelledby="navbarDropdowns">
+                            <a class='dropdown-item' href='cs.html'>Si Arsip <sup>Cooming Soon</sup></a>
+                            <a class='dropdown-item' href='cs.html'>Si Taris <sup>Cooming Soon</sup></a>
+                            <a class='dropdown-item' href='cs.html'>Si Money <sup>Cooming Soon</sup></a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class='nav-link' href='#faq'>Faq</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- home section start -->
+    <section class="jumbotron jumbotron-flui">
+        <div class="home d-flex align-items-center animate">
+            <div class="container">
+                <div class="home-text">
+                    <img src="assets/img/logo/ipm.png" alt="" width="300px">
+                    <h1 class="animate">IPM Al Amin</h1>
+                    <p class="animate">Online Platform From Ikatan Pelajar Muhammadiyah MBS Alamin.</p>
+                </div>
+                <div class="cta-home text-center animate">
+                    <a class='btn btn-primary shadow-none d-block d-md-inline-block' href='#about'>Jelajahi Sekarang
+                        &nbsp; <i data-feather="arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <style>
+    .animate {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+    .card-animate-delay {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 1s ease, transform 1s ease;
+    }
+
+    .fade-in {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in-left {
+    transform: translateX(-50px);
+}
+
+    </style>
+
+<script>
+    // Function to add animation class when element is in viewport with shorter delay
+    function addAnimationClass() {
+        const elements = document.querySelectorAll('.animate');
+        elements.forEach((element, index) => {
+            if (isInViewport(element)) {
+                element.classList.add('fade-in');
+            }
+        });
+
+        const cardElements = document.querySelectorAll('.card-animate-delay');
+        cardElements.forEach((element, index) => {
+            if (isInViewport(element)) {
+                element.classList.add('fade-in', 'fade-in-left');
+            }
+        });
+    }
+
+    // Function to check if an element is in viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Initial check on page load
+    addAnimationClass();
+
+    // Add event listener for scroll
+    window.addEventListener('scroll', addAnimationClass);
+</script>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    <br><br>
+    <!-- About Start -->
+    <section class="container business" id="about">
+        <div class="header-section text-center">
+            <span class="animate">Kenalan Dengan</span>
+            <h3 class="animate">IPM Al Amin</h3>
+        </div>
+    <!-- About End -->
+
+
+    <div class="card animate">
+        <div class="card-body">
+          <p>Portal IPM Alamin merupakan sebuah platform Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus doloribus reprehenderit temporibus consequatur dolores omnis sequi, ea porro iste nihil, voluptas earum animi praesentium. Sed enim consequatur at minima tempora.</p>
+          <p>Portal IPM Alamin merupakan sebuah platform Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus doloribus reprehenderit temporibus consequatur dolores omnis sequi, ea porro iste nihil, voluptas earum animi praesentium. Sed enim consequatur at minima tempora.</p>
+        </div>
+      </div>
+
+        <!-- Accordion Title Start -->
+    <section class="container business">
+        <div class="header-section text-center">
+            <span class="animate">Struktur Organisasi</span>
+            <h3 class="animate">Ikatan Pelajar Muhammadiyah PR. IPM MBS Al Amin 2024/2025</h3>
+        </div>
+        <!-- Accordion Title End -->
+
+    <!-- Accordion Start -->
+
+<div class="accordion">
+    <div class="accordion-item animate">
+        <div class="accordion-header">Penanggung Jawab</div>
+        <div class="accordion-content">
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Miftachul Afif Abduh" width="150px">
+                    <p>Miftachul Afif Abduh, M.Pd.I</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item animate">
+        <div class="accordion-header">Kepemimpinan</div>
+        <div class="accordion-content">
+            <div class="accordion-item">
+                <div class="accordion-header">Ketua IPM</div>
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Rayyan Naufal" width="150px">
+                    <p>Rayyan Naufal Ash-Shoumi</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">Wakil Ketua IPM</div>
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Aqbil Nashrullah Haq" width="150px">
+                    <p>Aqbil Nashrullah Haq</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Space -->
+    <div style="height: 40px;"></div>
+
+    <!-- Kesekretariatan -->
+    <div class="accordion-item animate">
+        <div class="accordion-header">Kesekretariatan</div>
+        <div class="accordion-content">
+            <div class="accordion-item">
+                <div class="accordion-header">Sekretaris Utama</div>
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Arif Wahyu Setiawan" width="150px">
+                    <p>Arif Wahyu Setiawan</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">Sekretaris Satu</div>
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Alvin Jauhari" width="150px">
+                    <p>M. Alvin Jauhari</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">Sekretaris Dua</div>
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Masyfa Hafizul Haqqi" width="150px">
+                    <p>Masyfa Hafizul Haqqi</p>
+                </div>
+                <div class="accordion-header">Laporan Arsip</div>
+                <div class="accordion-content">
+                    <table cellpadding="10" cellspacing="0" border="1">
+                        <tr>
+                            <td>Surat Masuk</td>
+                            <td>Surat Keluar</td>
+                            <td>Total Surat</td>
+                        </tr>
+                        <tr>
+                            <td><span id="suratMasuk" class="count-animate">0</span> Surat</td>
+                            <td><span id="suratKeluar" class="count-animate">0</span> Surat</td>
+                            <td><span id="totalSurat" class="count-animate">0</span> Surat</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bendahara -->
+    <div class="accordion-item animate">
+        <div class="accordion-header">Bendahara</div>
+        <div class="accordion-content">
+            <div class="accordion-item">
+                <div class="accordion-header">Bendahara Utama</div>
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fatihul Haldin" width="150px">
+                    <p>M. Fatihul Haldin</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header">Bendahara Satu</div>
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Daud Ibrahim" width="150px">
+                    <p>M. Daud Ibrahim</p>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Bendahara Dua</div>
+                    <div class="accordion-content">
+                        <img src="assets/img/avatar/avatar.svg" alt="Hisam Rifqi Mustofa" width="150px">
+                        <p>Hisam Rifqi Mustofa</p>
+                        <div class="accordion-header">Laporan Keuangan</div>
+                        <div class="accordion-content">
+                            <table cellpadding="10" cellspacing="0" border="1">
+                                <tr>
+                                    <td>Uang Masuk</td>
+                                    <td>Uang Keluar</td>
+                                    <td>Total Saldo</td>
+                                </tr>
+                                <tr>
+                                    <td><span id="uangMasuk" class="count-animate">0</span></td>
+                                    <td><span id="uangKeluar" class="count-animate">0</span></td>
+                                    <td><span id="totalSaldo" class="count-animate">0</span></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Perkaderan -->
+    <div class="accordion-item animate">
+        <div class="accordion-header">Perkaderan</div>
+        <div class="accordion-content">
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Atallah Wafi" width="150px">
+                    <p>M. Fadil Nirwan</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Perkaderan -->
+      <div class="accordion-item animate">
+        <div class="accordion-header">Advokasi</div>
+        <div class="accordion-content">
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Atallah Wafi" width="150px">
+                    <p>M. Adib Reihan</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Apresiasi Seni Budaya Dan Olahraga -->
+    <div class="accordion-item animate">
+        <div class="accordion-header">Apresiasi Seni Budaya Dan Olahraga</div>
+        <div class="accordion-content">
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Atallah Wafi" width="150px">
+                    <p>M. Atallah Wafi</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fatih Akbar" width="150px">
+                    <p>M. Fatih Akbar</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Lingkungan Hidup -->
+    <div class="accordion-item animate">
+        <div class="accordion-header">Lingkungan Hidup</div>
+        <div class="accordion-content">
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Dhiefaody Elang Setiawan</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Anak selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Anak selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Teknologi Informasi -->
+    <div class="accordion-item animate">
+        <div class="accordion-header">Teknologi Informasi</div>
+        <div class="accordion-content">
+            <div class="accordion-item">
+                <div class="accordion-content">
+                 <div class="accordion-header">Ketua</div>
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>M. Zulfa Indar Rasyid</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Fadil Nirwan" width="150px">
+                    <p>Orang selanjutnya</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bahasa -->
+    <div class="accordion-item animate">
+        <div class="accordion-header">Bahasa</div>
+        <div class="accordion-content">
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>M. Tsaqfan Arib Editia</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Anak selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Anak selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Anak selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Anak selanjutnya</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PIP -->
+    <div class="accordion-item animate">
+        <div class="accordion-header">Pengkajian Ilmu Pengetahuan</div>
+        <div class="accordion-content">
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Iskandar Zulkarnain</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Ahmad Thoriq</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Anak selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Anak selanjutnya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Anak selanjutnya</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Kajian Dakwah Islam -->
+    <div class="accordion-item animate">
+        <div class="accordion-header">Kajian Dakwah Islam</div>
+        <div class="accordion-content">
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>M. Rofi Awaluddin</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Anak selanjtunya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Anak selanjtunya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Anak selanjtunya</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-content">
+                    <img src="assets/img/avatar/avatar.svg" alt="Image 1" width="150px">
+                    <p>Anak selanjtunya</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Accordion End-->
+
+     <!-- Event Section Start -->
+     <section class="container business">
+        <div class="header-section text-center">
+                <span id="event" class="animate">Event</span>
+            <h3 class="animate">PR. IPM MBS Al Amin 2024/2025</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-3 card-item">
+                <a href='/detail_invest'>
+                    <div class="card">
+                        <img src="assets/img/event/alisco.jpg"
+                            class="card-img-top animate" alt="img">
+                        <div class="card-body">
+                            <h5 class="card-title animate">Alisco (Al Amin Student Competition)</h5>
+                            <p class="desc animate">Alisco merupakan acara tahunan yang diselenggarakan oleh PR IPM MBS ALAMIN Bojonegoro. Acara ini mengadakan serangkaian lomba yang ditujukan kepada siswa siswi SD Dan SMP Sekaresidenan Memperkenalkan Pondok Pesantren MBS Al Amin Bojonegoro kepada siswa-siswi SD/MI/SMP/MTS sederajat se-Karesidenan Bojonegoro, Gresik, Blora.</p>
+                            <div class="text-right">
+                                <span class="count-progress">100%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <h6>Progres Yang Tercapai</h6>
+                            <div class="row">
+                                <div class="col col-xs-4 ">
+                                    <span class="total">Total Partisipan</span>
+                                    <p class="cost">500 Siswa / Siswi</p>
+                                </div>
+                                <div class="col col-xs-4 ">
+                                    <span class="total">Dilaksanakan Setiap</span>
+                                    <p class="cost">2 Tahun Sekali</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        
+            <div class="col-md-6 col-lg-3 card-item">
+                <a href="/detail">
+                    <div class="card">
+                        <img src="assets/img/event/alea.png"
+                            class="card-img-top animate" alt="img">
+                        <div class="card-body">
+                            <h5 class="card-title animate">ALEA (Al Amin Education Award)</h5>
+                            <p class="desc animate">Al Amin Education Award Adalah Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolores nam harum repellendus est impedit asperiores eum, nemo veniam culpa aliquid animi, quasi doloribus! Expedita odit exercitationem unde repellendus hic?</p>
+                            <div class="text-right">
+                                <span class="count-progress">0%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                                    aria-valuemin="0" aria-valuemax="0"></div>
+                            </div>
+                            <h6>Progres Yang Tercapai</h6>
+                            <p style="text-decoration: line-through;">Belum Diadakan</p>
+                            <div class="row">
+                                <div class="col col-xs-4 ">
+                                    <span class="total">Total Partisipan</span>
+                                    <p class="cost">250 Santri</p>
+                                </div>
+                                <div class="col col-xs-4 ">
+                                    <span class="total">Dilaksanakan Setiap</span>
+                                    <p class="cost">1 Tahun Sekali</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 col-lg-3 card-item">
+                <a href="/detail">
+                    <div class="card">
+                        <img src="https://placehold.co/600x400"
+                            class="card-img-top animate" alt="img">
+                        <div class="card-body">
+                            <h5 class="card-title animate">ISC (Islamic Student Competition)</h5>
+                            <p class="desc animate">Islamic Student Competition Adalah Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolores nam harum repellendus est impedit asperiores eum, nemo veniam culpa aliquid animi, quasi doloribus! Expedita odit exercitationem unde repellendus hic?</p>
+                            <div class="text-right">
+                                <span class="count-progress">0%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                                    aria-valuemin="0" aria-valuemax="0"></div>
+                            </div>
+                            <h6>Progres Yang Tercapai</h6>
+                            <p style="text-decoration: line-through;">Belum Diadakan</p>
+                            <div class="row">
+                                <div class="col col-xs-4 ">
+                                    <span class="total">Total Partisipan</span>
+                                    <p class="cost">250 Santri</p>
+                                </div>
+                                <div class="col col-xs-4 ">
+                                    <span class="total">Dilaksanakan Setiap</span>
+                                    <p class="cost">1 Tahun Sekali</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 col-lg-3 card-item">
+                <a href="/detail">
+                    <div class="card">
+                        <img src="https://placehold.co/600x400"
+                            class="card-img-top animate" alt="img">
+                        <div class="card-body">
+                            <h5 class="card-title">SMT (Selasa Makin Tahu)</h5>
+                            <p class="desc animate">Selasa Makin Tahu Adalah Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolores nam harum repellendus est impedit asperiores eum, nemo veniam culpa aliquid animi, quasi doloribus! Expedita odit exercitationem unde repellendus hic?</p>
+                            <div class="text-right">
+                                <span class="count-progress">0%</span>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                                    aria-valuemin="0" aria-valuemax="0"></div>
+                            </div>
+                            <h6>Progres Yang Tercapai</h6>
+                            <p style="text-decoration: line-through;">Belum Diadakan</p>
+                            <div class="row">
+                                <div class="col col-xs-4 ">
+                                    <span class="total">Total Partisipan</span>
+                                    <p class="cost">250 Santri</p>
+                                </div>
+                                <div class="col col-xs-4 ">
+                                    <span class="total">Dilaksanakan Setiap</span>
+                                    <p class="cost">1 Tahun Sekali</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+         <!-- Event Section End -->
+    <br><br><br>
+
+    <!-- services section start -->
+    <section class="container services">
+        <div class="header-section-all text-center">
+            <span class="animate">Pena Digital Alamin</span>
+            <h3 class="animate">Fitur Fitur Penunjang</h3>
+            <p class="animate">Segera hadir! aplikasi digital yang memudahkan</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-12">
+                <div class="card animate">
+                    <div class="card-body">
+                        <div class="icon">
+                            <img src="assets/img/icon-custom/services-icon/icon1.png" alt="">
+                        </div>
+                        <h4>Siarsip</h4>
+                        <i>Si Pengarsipan</i>
+                        <p>Memudahkan para ikhmawan untuk merekap surat dan dokumen IPM</p>
+                        <p><b>Status: Dalam Tahap Pengembangan</b></p>
+                        <div class="cta-home text-center">
+                            <a class='btn btn-primary d-block d-md-inline-block' href='cs.html'>Coba Sekarang
+                                &nbsp; <i data-feather="arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12">
+                <div class="card animate">
+                    <div class="card-body">
+                        <div class="icon">
+                            <img src="assets/img/icon-custom/services-icon/icon2.png" alt="">
+                        </div>
+                        <h4>Sitaris</h4>
+                        <i>Si Inventaris</i>
+                        <p>Memudahkan para ikhmawan untuk mendata barang yang berada di lingkupnya</p>
+                        <p><b>Status: Dalam Tahap Pengembangan</b></p>
+                        <div class="cta-home text-center">
+                            <a class='btn btn-primary d-block d-md-inline-block' href='cs.html'>Coba Sekarang
+                                &nbsp; <i data-feather="arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-12">
+                <div class="card animate">
+                    <div class="card-body">
+                        <div class="icon">
+                            <img src="assets/img/icon-custom/services-icon/icon3.png" alt="">
+                        </div>
+                        <h4>Simoney</h4>
+                        <p>A joint vente between curompanies can open the way for expansion into a new line.</p>
+                        <p><b>Status: Dalam Tahap Pengembangan</b></p>
+                        <div class="cta-home text-center">
+                            <a class='btn btn-primary d-block d-md-inline-block' href='cs.html'>Coba Sekarang
+                                &nbsp; <i data-feather="arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- services section end -->
+
+     <!-- Program Kerja Start -->
+
+    <br><br><br>
+    
+    <section class="container courses" id="proker">
+        <div class="header-section-all text-center">
+            <span class="animate">Program Kerja</span>
+            <h3 class="animate">Ikatan Pelajar Muhammadiyah 2024/2025</h3>
+        </div>
+
+     <ul>
+         <li style="--accent-color:#41516C">
+             <div class="field animate">Kepemimpinan</div>
+             <li>Mencerdaskan Bangsa</li>
+             <li>Menata Keuangan</li>
+             <li>Mencerdaskan Keluarga</li>
+             <li>Membersihkan IPM Setiap Hari</li>
+         </li>
+         <li style="--accent-color:#FBCA3E">
+             <div class="field animate">Kesekretariatan</div>
+             <li>Mencerdaskan Bangsa</li>
+             <li>Menata Keuangan</li>
+             <li>Mencerdaskan Keluarga</li>
+             <li>Membersihkan IPM Setiap Hari</li>
+         </li>
+         <li style="--accent-color:#E24A68">
+             <div class="field animate">Bendahara</div>
+             <li>Mencerdaskan Bangsa</li>
+             <li>Menata Keuangan</li>
+             <li>Mencerdaskan Keluarga</li>
+             <li>Membersihkan IPM Setiap Hari</li>
+         </li>
+         <li style="--accent-color:#1B5F8C">
+             <div class="field animate">Perkaderan</div>
+             <li>Mencerdaskan Bangsa</li>
+             <li>Menata Keuangan</li>
+             <li>Mencerdaskan Keluarga</li>
+             <li>Membersihkan IPM Setiap Hari</li>
+         </li>
+         <li style="--accent-color:#4CADAD">
+             <div class="field animate">Kajian Ilmu Pengetahuan</div>
+             <li>Mencerdaskan Bangsa</li>
+             <li>Menata Keuangan</li>
+             <li>Mencerdaskan Keluarga</li>
+             <li>Membersihkan IPM Setiap Hari</li>
+         </li>
+     </ul>
+     <!-- Program Kerja End -->
+     <!-- Question section start -->
+    <section class="container courses" id="faq">
+        <div class="header-section-all text-center">
+            <span class="animate">Pertanyaan</span>
+            <h3 class="animate">Yang sering ditanyakan</h3>
+        </div>
+    
+<div id="accordion">
+  <div class="card animate">
+    <div class="card-header" id="headingOne">
+      <h5 class="mb-0">
+        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Apa itu IPM?
+        </button>
+      </h5>
+    </div>
+
+    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+        ipm adalah Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque ipsa architecto ipsam perspiciatis repudiandae animi expedita quo iusto, earum similique temporibus minima eius tempore fugiat voluptatibus, aliquid provident magnam. Est!
+      </div>
+    </div>
+  </div>
+  <div class="card animate">
+    <div class="card-header" id="headingTwo">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Kapan Didirikan?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  <div class="card animate">
+    <div class="card-header" id="headingThree">
+      <h5 class="mb-0">
+        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Visi Dan Misi?
+        </button>
+      </h5>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+      <div class="card-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+</div>
+        
+     <!-- Question section end -->
+
+
+     <br><br><br><br>
+     
+    <!-- footer section start -->
+    <footer class="footer">
+        <div class="container animate">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="footer-col">
+                        <div class="logo">
+                            <img src="assets/img/logo/ipm.png" alt="">
+                        </div>
+                        <p class="brand-text">Platform Digital PR IPM MBS Al Amin Bojonegoro.</p>
+                        <div class="icon-sosmed">
+                            <a href="https://www.instagram.com/ipm_alamin/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                        </div>
+                        <div class="icon-sosmed">
+                            <a href="https://www.youtube.com/@MBSAlAminBojonegoro" target="_blank"><i class='bx bxl-youtube'></i></a>
+                        </div>
+                        <div class="icon-sosmed">
+                            <a href="http://"><i class='bx bxl-twitter'></i></a>
+                        </div>
+                    </div>
+                </div>
+               
+                <div class="col-lg-3 ">
+                    <div class="footer-col">
+                        <h3>Contact us</h3>
+                        <p class="contact-text">Phone : <a href="https://wa.me/08972553467575">08972553467575</a></p>
+                        <p class="contact-text">Email: <a href="mailto:ipmmbsalamin@gmail.com">ipmmbsalamin@gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p id="copyright" class="copyright-text">&copy; <span id="currentYear"></span> Powered by <a href="#">IPM Al - Amin</a>, Developed by <a href="https://instagram.com/alvinjauhari_">Santri Developer</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+    <!-- jquery js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <!-- popper js -->
+    <script src="assets/js/popper.min.js"></script>
+    <!-- scrollIt js -->
+    <script src="assets/js/scrollIt.min.js"></script>
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+    <!-- SCROLL REVEAL -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Animate CSS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+        AOS.init({
+            easing: 'ease-in-out-sine'
+        });
+    </script>
+
+</body>
+
+</html>
